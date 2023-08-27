@@ -1,0 +1,47 @@
+{
+  "name": "freeze-thaw",
+  "version": "0.0.1",
+  "description": "Provides functions to make mutable objects immutable ('freeze'), and immutable objects mutable ('thaw').",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TejAtParkourOps/freeze-thaw.git"
+  },
+  "keywords": [
+    "object",
+    "immutable",
+    "immutability",
+    "persistent",
+    "mutable",
+    "freeze",
+    "frozen",
+    "thaw",
+    "typescript",
+    "deep",
+    "readonly",
+    "clone",
+    "writeable",
+    "sharing"
+  ],
+  "author": {
+    "name": "Tej Birring",
+    "email": "tej@parkourops.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TejAtParkourOps/freeze-thaw.git/issues"
+  },
+  "homepage": "https://github.com/TejAtParkourOps/freeze-thaw.git#readme",
+  "devDependencies": {
+    "@types/lodash.clonedeep": "^4.5.7",
+    "ts-essentials": "^9.3.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  }
+}
