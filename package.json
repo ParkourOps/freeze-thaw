@@ -4,8 +4,9 @@
   "description": "Provides functions to make mutable objects immutable ('freeze'), and immutable objects mutable ('thaw').",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier -c .",
+    "build": "npm run format && rm -rf ./lib && tsc",
+    "test": "npm run build && mocha"
   },
   "repository": {
     "type": "git",
@@ -37,8 +38,12 @@
   },
   "homepage": "https://github.com/TejAtParkourOps/freeze-thaw.git#readme",
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@types/lodash.clonedeep": "^4.5.7",
-    "ts-essentials": "^9.3.2",
+    "chai": "^4.3.8",
+    "mocha": "^10.2.0",
+    "prettier": "^3.0.2",
+    "ts-essentials": "^9.4.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {
