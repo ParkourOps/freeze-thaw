@@ -91,3 +91,7 @@ const myWriteableCopy = thaw(someReadOnlyObject);
 console.log(myWriteableCopy === someObject);
 // => false
 ```
+
+## Dependencies
+
+* `lodash.clonedeep`, used for deep cloning objects.
