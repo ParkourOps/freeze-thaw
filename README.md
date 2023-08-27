@@ -74,6 +74,10 @@ console.log(myReadOnlyCopy === someObject);
 
 ### Make Something Read-Only Writeable Again with `thaw(input)`
 
+**Note:** this is actually just a deep copy!
+
+The difference between `thaw(input)` and `makeCopy(input)` is that the former actually removes the `readonly` marker from properties.
+
 ```js
 // start with some frozen/read-only object:
 const someReadOnlyObject = freeze({ 
