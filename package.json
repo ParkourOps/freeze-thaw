@@ -1,6 +1,6 @@
 {
   "name": "@parkour-ops/freeze-thaw",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides functions to make mutable objects immutable ('freeze'), and immutable objects mutable ('thaw').",
   "main": "index.js",
   "scripts": {
