@@ -1,5 +1,5 @@
-import { DeepReadonly, DeepWritable } from "ts-essentials";
 import { makeCopy } from "./copy";
+import { DeepReadonly } from "./utils";
 
 /**
  * Make a deep copy of the frozen input (preserving inheritance, if any).

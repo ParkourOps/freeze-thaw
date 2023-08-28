@@ -1,5 +1,5 @@
-import { DeepReadonly } from "ts-essentials";
 import { makeCopy } from "./copy";
+import { DeepReadonly } from "./utils";
 
 export interface FreezeOptions {
     attemptFreezeCircularRefs: boolean;
