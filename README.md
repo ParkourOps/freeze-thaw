@@ -2,7 +2,9 @@
 
 > **TypeScript library to ensure objects are immutable in development-time, compile-time, and runtime.**
 
-!\[license badge\](https://bzadgen.net/github/license/micromatch/micromatch)
+[![License: MIT](https://badgen.net/github/license/micromatch/micromatch)](https://opensource.org/licenses/MIT)
+![Tests: Passing](https://badgen.net/badge/tests/passing/green)
+[![npm Release: v1.0.0](https://badgen.net/badge/release/v1.0.0/blue?icon=npm)](https://www.npmjs.com/package/@parkour-ops/freeze-thaw)
 
 ## Background / Intro
 
