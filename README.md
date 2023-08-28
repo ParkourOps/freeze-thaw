@@ -1,6 +1,10 @@
-# Freeze and Thaw
+# Freeze | Thaw
 
-> **Make objects read-only in development-time, compile-time, and runtime.**
+> **TypeScript library to ensure objects are immutable in development-time, compile-time, and runtime.**
+
+!\[license badge\](https://bzadgen.net/github/license/micromatch/micromatch)
+
+## Background / Intro
 
 The highest level of protection that a JavaScript engine provides against improper and unexpected changes is in *runtime:* the ability to [freeze objects.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) Any assignment to a frozen object's property will result in an error being thrown during execution of the script, but *only when* the script is running in __'strict mode.'__
 
@@ -8,13 +12,13 @@ Meanwhile, TypeScript prevents improper assignments through (careful and precise
 
 This small library aims to reconcile runtime protection provided by JavaScript's `Object.freeze(...)` with the development-time and transpile-time protection provided by TypeScript's type declarations.
 
-## Install
+## How to Install
 
 Simply add the package to your 'npm' project using an import statement:
 
 `npm install @parkour-ops/freeze-thaw`
 
-## Use
+## How to Use
 
 Simply import the functions you would like to use as follows:
 
@@ -36,7 +40,7 @@ This is the [Node.js default.](https://nodejs.org/api/esm.html#enabling)
 
 This package provides the following functions:
 
-### Deep Copy Something with `makeCopy(input)`
+### deep copy something with `makeCopy(input)`
 
 ```js
 // start with some object, array, or function, (or anything)
@@ -50,7 +54,7 @@ console.log(myCopy === someObject);
 // => false
 ```
 
-### Make Something Read-Only with `freeze(input)`
+### make something read-only with `freeze(input)`
 
 ```js
 // start with some object, array, or function, (or anything)
@@ -66,7 +70,7 @@ console.log(sameObjectWithReadOnlyTyping === someObject);
 // => true
 ```
 
-### Deep Copy Something as Read-Only with `makeFrozenCopy(input)`
+### make a read-only deep copy of something with `makeFrozenCopy(input)`
 
 ```js
 // start with some object, array, or function, (or anything)
@@ -82,11 +86,11 @@ console.log(myReadOnlyCopy === someObject);
 // => false
 ```
 
-### Make Something Read-Only Writeable Again with `thaw(input)`
+### make a read-only something writeable again with `thaw(input)`
 
-**Note:** this is actually just a deep copy!
+**Note:** since JavaScript runtime does not allow objects 'frozen' with `Object.freeze(...)` to be 'unfrozen`, this is actually just a deep copy!
 
-The difference between `thaw(input)` and `makeCopy(input)` is that the former actually removes the `readonly` marker from properties.
+The difference between `thaw(input)` and `makeCopy(input)` is that `thaw(input)` actually removes the `readonly` marker from the properties' type declarations.
 
 ```js
 // start with some frozen/read-only object:
