@@ -16,10 +16,20 @@ Simply add the package to your 'npm' project using an import statement:
 
 ## Use
 
-Simply import the functions you would like to use as follows (NodeJS):
+Simply import the functions you would like to use as follows:
+
+### CommonJS Modularity Ecosystem
+
+This is the [Node.js default.](https://nodejs.org/api/esm.html#enabling)
 
 ```js
+    const { makeCopy, makeFrozenCopy, freeze, thaw } = require("@parkour-ops/freeze-thaw");
+```
 
+### ECMAScript Modularity Ecosystem
+
+```js
+    import { makeCopy, makeFrozenCopy, freeze, thaw } from "@parkour-ops/freeze-thaw";
 ```
 
 ## Functions
