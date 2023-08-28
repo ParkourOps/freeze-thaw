@@ -1,5 +1,5 @@
 {
-  "name": "freeze-thaw",
+  "name": "@parkour-ops/freeze-thaw",
   "version": "0.0.1",
   "description": "Provides functions to make mutable objects immutable ('freeze'), and immutable objects mutable ('thaw').",
   "main": "index.js",
@@ -48,5 +48,8 @@
   },
   "dependencies": {
     "lodash.clonedeep": "^4.5.0"
-  }
+  },
+  "files": [
+    "./lib"
+  ]
 }
