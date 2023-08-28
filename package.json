@@ -1,11 +1,13 @@
 {
   "name": "@parkour-ops/freeze-thaw",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "Provides functions to make mutable objects immutable ('freeze'), and immutable objects mutable ('thaw').",
   "scripts": {
     "format": "prettier -c .",
-    "build": "npm run format && rm -rf ./lib && tsc",
-    "test": "npm run build && mocha"
+    "build": "rm -rf ./lib && tsc",
+    "build-test": "npm run build && mocha",
+    "preversion": "npm run format && npm run build-test",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
